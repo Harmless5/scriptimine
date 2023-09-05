@@ -1,7 +1,7 @@
-+ root kasutajana oleme installinud git:
+* root kasutajana oleme installinud git:
 apt install git
 
-+ edasi tavakasutajana:
+* edasi tavakasutajana:
 a) seadistame kasutajana, email, editor
 git config --global user.name "K K"
 git config --global user.email k.k@khk.ee
@@ -16,8 +16,9 @@ cd /home/user/skriptimine
 d) tekita lokaalne repositoorium git süsteemi jaoks antud kasutas
 git init
 
+remote seadistamine:
 e) git remote add nimi github:aadress
-git remote add skriptimine git@github.com:kasutajanimi/eesnimi.git
+git remote add skriptimine git@github.com:kasutajanimi/reponimi.git
 
 f) git remote kontroll
 git remote -v
