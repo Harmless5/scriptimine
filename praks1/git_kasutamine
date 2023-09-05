@@ -13,5 +13,11 @@ mkdir /home/user/skriptimine
 c) sisene antud kasutajana
 cd /home/user/skriptimine
 
-d/ tekita lokaalne repositoorium git süsteemi jaoks antud kasutas
+d) tekita lokaalne repositoorium git süsteemi jaoks antud kasutas
 git init
+
+e) git remote add nimi github:aadress
+git remote add skriptimine git@github.com:kasutajanimi/eesnimi.git
+
+f) git remote kontroll
+git remote -v
