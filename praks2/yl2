@@ -1,0 +1,7 @@
+#!/bin/bash
+# Skript, milles on variaabel, mis väljastab andmed yl3 failist
+nimi="Ees ja Perenimi: Kristjan Kruus" # Väljastab ees ja perenime
+oppegrupp="Õppegrupp: ITS21" # Väljastab õppegrupi
+aine="Meeldib preagune aine" # Väljastab kas preagune aine meeldib või mitte
+kool="Tahan saada ülikooli" # Väljastab kas tahan saada ülikooli või mitte
+it="Tahan saada heaks IT spetsialistiks saada" # Väljastab kas tahan saada heaks IT spetsialistiks või mitte

@@ -1,0 +1,8 @@
+#!/bin/bash
+# Skripti eesmärk on väljastada "Tere, " ilma reavahetuseta, küsida kasutaja nime ja väljastada see reavahetusega ning lõpuks väljastada "!" reavahetusega.
+# Väljasta "Tere, " ilma reavahetuseta
+echo -n "Tere, "
+# Küsi kasutaja nime
+echo -n `whoami`
+# Väljasta reavahetus
+echo "!"

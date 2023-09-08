@@ -1,0 +1,10 @@
+#!/bin/bash
+#Väljastab andmed yl2 failist
+# Kutsume variaablid yl2 failist
+source ./yl2 # Väljastab andmed yl2 failist
+echo $nimi # Väljastab ees ja perenime
+echo $oppegrupp # Väljastab õppegrupi
+echo $aine # Väljastab kas preagune aine meeldib või mitte
+echo $kool # Väljastab kas tahan saada ülikooli või mitte
+echo $it # Väljastab kas tahan saada heaks IT spetsialistiks või mitte
+# Skripti lõpp
