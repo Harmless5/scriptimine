@@ -1,0 +1,8 @@
+#!/bin/bash
+# Skripti eesmärk on luua muutujad aasta, president ja lause_keskosa ning väljastada lause, mis ühendab need muutujad.
+aasta=2021
+president="Alar Karis"
+lause_keskosa=". aastal valiti Eesti presidendiks "
+lause="$aasta$lause_keskosa$president"
+
+echo $lause
