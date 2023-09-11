@@ -1,0 +1,9 @@
+#!/bin/bash
+# See skript küsib kasutajalt EAP-de arvu ja nädalate arvu ning arvutab nende põhjal välja oodatava nädalatööde arvu.
+read -p "Sisesta EAP-de arv: " eaps
+read -p "Sisesta nädalate arv: " nadalad
+# Kalkuleerime oodatava tööde arvu, korrutades EAP-de arvu 26-ga
+kokku_tunde=$(echo "$eaps * 26" | bc)
+# Kalkuleerime oodatava nädalatööde arvu, jagades oodatava tööde arvu nädalate arvuga
+nadala_tunnid=$(echo "($kokku_tunde + $nadalad - 1) / $nadalad" | bc)
+echo "Oodatav nädalatööde arv on $nadala_tunnid tundi."
