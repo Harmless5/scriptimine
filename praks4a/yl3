@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Skript kataloogi backupimiseks.
+# Skript küsib kasutajalt kataloogi nime.
+echo -n "Sisesta kataloogi nimi: "
+read kataloog
+# Loo kaust backup-i jaoks.
+mkdir -p ./backup
+echo "Tehakse backup kataloogist $kataloog ja salvestatakse ./backup/$kataloog.backup.tar.gz."
+# Kataloogi backupimine.
+tar -czvf ./backup/"$kataloog".backup.tar.gz "./praks4a/$kataloog"
+echo "Valmis!"
