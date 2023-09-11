@@ -1,0 +1,16 @@
+#!/bin/bash
+# Skript, mis küsib kasutajalt nime, tervitab teda, küsib sünniaastat ja arvutab vanuse.
+
+echo -n "Sisesta oma nimi: "
+read nimi
+
+echo "Tere tulemast, $nimi!"
+
+echo -n "Sisesta oma sünniaasta: "
+read synniaasta
+
+# Arvutame vanuse.
+vanus=$((2023 - synniaasta))
+
+# Väljastame nime ja vanuse.
+echo "$nimi, sina oled $vanus aasta vana."
