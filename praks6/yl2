@@ -1,0 +1,24 @@
+#!/bin/bash
+# Täiendatud versioon praks4/yl4-st.
+# Skript, mis arvutab täielikult täidetud busside arvu ja maha jäänud inimeste arvu.
+
+echo -n "Sisesta reisijate arv: "
+read reisijad
+
+echo -n "Sisesta bussi kohtade arv: "
+read kohad
+
+# Arvutame täielikult täidetud busside arvu ja maha jäänud inimeste arvu.
+taitetud=$((reisijad / kohad))
+
+# Kui reisijate arv ei jagu täpselt bussi kohtade arvuga, siis on maha jäänud inimeste arv reisijate arvust maha arvutatud täielikult täidetud busside arvuga.
+mahajaanud=$((reisijad % kohad))
+
+# Kui on maha jäänud inimesi, siis suurendame busside arvu ühe võrra.
+if [ $mahajaanud -gt 0 ]
+then
+    taitetud=$((taitetud + 1))
+fi
+
+# Väljastame tulemuse.
+echo "Kokku on vaja $taitetud täisbussi"
