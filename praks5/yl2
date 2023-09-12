@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Skript, mis küsib kasutajalt kolmnurga külgede väärtused, arvutab pindala ja väljastab selle koos seletava kirjeldusega.
+
+echo -n "Sisesta a külje väärtus: "
+read a
+
+echo -n "Sisesta b külje väärtus: "
+read b
+
+echo -n "Sisesa c külje väärtus: "
+read c
+
+s=$(echo "scale=2; ($a + $b + $c) / 2" | bc)
+
+# Kalkuleerime pindala Heroni valemi abil.
+pindala=$(echo "scale=2; sqrt($s * ($s - $a) * ($s - $b) * ($s - $c))" | bc)
+
+echo "Kolmnurga pindala on $pindala"
