@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Skript, mis küsib reisi alguspäeva numbri ja majutuse pikkuse ning väljastab tagasituleku nädalapäeva numbri.
+
+echo -n "Sisesta millal sõidad ära (0-6): "
+read algus
+
+echo -n "Sisesta reisi ööpäevade arv: "
+read oopaevad
+
+tagasi=$((($algus + $oopaevad) % 7))
+
+echo "Tagasi oled päeval number $tagasi"
