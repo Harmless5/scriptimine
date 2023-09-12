@@ -1,0 +1,13 @@
+#!/bin/bash
+echo -n "Sisesta palun täisarv: "
+read arv
+
+# Kontrollime kas arv on paaris või paaritu.
+jaak=$(($arv % 2))
+# Kui jääk on 0, siis on arv paaris.
+if [ $jaak -eq 0 ]
+then
+    echo "$arv on paaris."
+else
+    echo "$arv on paaritu."
+fi
