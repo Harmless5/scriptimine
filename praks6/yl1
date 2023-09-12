@@ -1,4 +1,5 @@
 #!/bin/bash
+# Skript, mis küsib kasutajalt täisarvu ja väljastab kas tegu on paaris või paaritu arvuga.
 echo -n "Sisesta palun täisarv: "
 read arv
 
