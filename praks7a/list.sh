@@ -9,15 +9,15 @@ linkid=0
 # Vaatame kataloogi sisu ja väljastame iga asja kohta info.
 for asi in *
 do
-    if [ -f $asi ]
+    if [ -f "$asi" ]
     then
         echo "$asi on fail"
         failid=$((failid + 1))
-    elif [ -d $asi ]
+    elif [ -d "$asi" ]
     then
         echo "$asi on kataloog"
         kataloogid=$((kataloogid + 1))
-    elif [ -L $asi ]
+    elif [ -L "$asi" ]
     then
         echo "$asi on link"
         linkid=$((linkid + 1))
