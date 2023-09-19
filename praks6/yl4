@@ -1,0 +1,15 @@
+#!/bin/bash
+# Skript, mis küsib kasutajalt täisarvu ja väljastab kas tegu on paaris või paaritu arvuga.
+if [ $# -ne 1 ]
+then
+    echo "Kasutusjuhend: "
+    echo "$0 täisarv"
+else
+    jaak = $(($1 % 2))
+    if [ $jaak -eq 0 ]
+    then
+        echo "$1 on paaris."
+    else
+        echo "$1 on paaritu."
+    fi
+fi
