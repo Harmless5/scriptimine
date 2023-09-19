@@ -1,0 +1,16 @@
+#!/bin/bash
+# Skript, mis loeb automaatselt arvuti süsteemi aega ja väljastab koos nimega kas tegu on hommik, päev, õhtu või öö.
+aeg=$(date +%H)
+nimi=$(whoami)
+if [ $aeg -ge 6 -a $aeg -lt 12 ]
+then
+    echo "Tere hommikust, $nimi!"
+elif [ $aeg -ge 12 -a $aeg -lt 18 ]
+then
+    echo "Tere päevast, $nimi!"
+elif [ $aeg -ge 18 -a $aeg -lt 22 ]
+then
+    echo "Tere õhtust, $nimi!"
+else
+    echo "Head ööd, $nimi!"
+fi
