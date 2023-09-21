@@ -1,0 +1,13 @@
+#!/bin/bash
+# Skript, mis küsib kasutajalt suvalise täisarvu ja arvutab selle arvu summa.
+
+echo -n "Sisesta suvaline täisarv: "
+read arv
+summa=0
+while [ $arv -ne 0 ]
+do
+    jaak=$(($arv % 10))
+    summa=$(($summa + $jaak))
+    arv=$(($arv / 10))
+done
+echo "Arvu summa on $summa."
