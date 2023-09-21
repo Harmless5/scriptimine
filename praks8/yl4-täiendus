@@ -1,0 +1,25 @@
+#!/bin/bash
+# Skript, mis väljastab 20 esimese täisarvu kohta, kas tegu on algarvuga või mitte.
+arv=1
+while [ $arv -lt 21 ]
+do
+    jagaja=2
+    algarv=1
+    while [ $jagaja -lt $arv ]
+    do
+        jaak=$(($arv % $jagaja))
+        if [ $jaak -eq 0 ]
+        then
+            algarv=0
+            break
+        fi
+        jagaja=$(($jagaja + 1))
+    done
+    if [ $algarv -eq 1 ]
+    then
+        echo "$arv on algarv."
+    else
+        echo "$arv ei ole algarv."
+    fi
+    arv=$(($arv + 1))
+done
