@@ -1,0 +1,13 @@
+#!/bin/bash
+# Skript, mis küsib kasutajalt ridade ja tärnide arvu ning väljastab vastava kujundi.
+read -p "Sisesta ridade arv: " read
+read -p "Sisesta tärnide arv: " tarnid
+for (( i=1; i<=$read; i++ ))
+do
+    echo -n "$i. "
+    for (( j=1; j<=$tarnid; j++ ))
+    do
+        echo -n "* "
+    done
+    echo ""
+done
