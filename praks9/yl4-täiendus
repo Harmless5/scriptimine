@@ -1,0 +1,14 @@
+#!/bin/bash
+# Täiendus ülesandest 4.
+# Skript, mis küsib kasutajalt ridade ja tärnide arvu ning väljastab iga järgmist rida rohkem tärne kui eelmine. (Täisnurkne kolmnurk tagurpidi)
+read -p "Sisesta ridade arv: " read
+read -p "Sisesta tärnide arv: " tarnid
+for (( i=$read; i>=1; i-- ))
+do
+    echo -n "$i. "
+    for (( j=1; j<=$i; j++ ))
+    do
+        echo -n "* "
+    done
+    echo ""
+done
