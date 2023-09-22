@@ -1,16 +1,20 @@
 #!/bin/bash
 # Skript, mis küsib kasutajalt suvalist täisarvu ja ütleb kas tegu on algarvuga või mitte.
-echo -n "Sisesta suvaline täisarv: "
-read arv
+read -p "Sisesta suvaline täisarv: " arv
 jagaja=2
-while [ $jagaja -lt $arv ]
-do
-    jaak=$(($arv % $jagaja))
-    if [ $jaak -eq 0 ]
-    then
-        echo "$arv ei ole algarv."
-        exit
-    fi
-    jagaja=$(($jagaja + 1))
-done
-echo "$arv on algarv."
+if [ $arv -eq 0 ] || [ $arv -eq 1 ]
+then
+    echo "$arv ei ole algarv."
+else
+    while [ $jagaja -lt $arv ]
+    do
+        jaak=$(($arv % $jagaja))
+        if [ $jaak -eq 0 ]
+        then
+            echo "$arv ei ole algarv."
+            exit
+        fi
+        jagaja=$(($jagaja + 1))
+    done
+    echo "$arv on algarv."
+fi
