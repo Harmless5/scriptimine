@@ -1,0 +1,17 @@
+#!/bin/bash
+# Skript, mis väljastab kujundi kombineerides olemasolevaid skripte.
+read -p "Sisesta vertikaalsete ridade arv: " vertikaal
+read -p "Sisesta horisontaalsete tärnide arv: " horisontaal
+for (( i=1; i<=$vertikaal; i++ ))
+do
+    echo -n "$i. "
+    for (( j=1; j<=$horisontaal-$i+1; j++ ))
+    do
+        echo -n "o "
+    done
+    for (( k=1; k<=$i; k++ ))
+    do
+        echo -n "* "
+    done
+    echo ""
+done
