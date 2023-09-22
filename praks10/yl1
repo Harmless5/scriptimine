@@ -1,0 +1,21 @@
+#!/bin/bash
+# Skript, mis väljastab kasutaja vanuse ja teatab, kas oled laps, nooruk, täiskasvanu või seenior või vigane sisend.
+echo -n "Sisesta palun oma vanus: "
+read vanus
+# Kui vanus on väiksem kui 11, siis oled laps.
+if [ $vanus -lt 11 ]
+then
+    echo "Oled laps."
+elif [ $vanus -ge 11 -a $vanus -lt 18 ]
+then
+    echo "Oled nooruk."
+elif [ $vanus -ge 18 -a $vanus -lt 63 ]
+then
+    echo "Oled täiskasvanu."
+elif [ $vanus -ge 63 -a $vanus -lt 120 ]
+then
+    echo "Oled seenior."
+elif [ $vanus -le 0 -o $vanus -ge 120 ]
+then
+    echo "Vigane sisend."
+fi
