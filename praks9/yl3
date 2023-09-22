@@ -1,0 +1,24 @@
+#!/bin/bash
+# Skript, mis küsib kasutajalt ridade ja tärnide arvu ning väljastab vastava kujundi, mille keskel on tühikud.
+read -p "Sisesta ridade arv: " read
+read -p "Sisesta tärnide arv: " tarnid
+for (( i=1; i<=$read; i++ ))
+do
+    if [ $i -eq 1 ] || [ $i -eq $read ]
+    then
+        echo -n "$i. "
+        for (( j=1; j<=$tarnid+2; j++ ))
+        do
+            echo -n "* "
+        done
+    echo ""
+    else
+        echo -n "$i. "
+        echo -n "* "
+        for (( j=1; j<=$tarnid; j++ ))
+        do
+            echo -n "  "
+        done
+        echo "*"
+    fi
+done
