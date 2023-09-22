@@ -5,16 +5,21 @@ while [ $arv -lt 21 ]
 do
     jagaja=2
     algarv=1
-    while [ $jagaja -lt $arv ]
-    do
-        jaak=$(($arv % $jagaja))
-        if [ $jaak -eq 0 ]
-        then
-            algarv=0
-            break
-        fi
-        jagaja=$(($jagaja + 1))
-    done
+    if [ $arv -eq 1 ]
+    then
+        algarv=0
+    else
+        while [ $jagaja -lt $arv ]
+        do
+            jaak=$(($arv % $jagaja))
+            if [ $jaak -eq 0 ]
+            then
+                algarv=0
+                break
+            fi
+            jagaja=$(($jagaja + 1))
+        done
+    fi
     if [ $algarv -eq 1 ]
     then
         echo "$arv on algarv."
