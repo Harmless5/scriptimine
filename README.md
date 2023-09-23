@@ -1,6 +1,8 @@
 # Shell-skriptid
 
-See repo sisaldab erinevaid shell-skripte, mida saab kasutada erinevate ülesannete lahendamiseks. Iga skripti kohta on allpool lühike kirjeldus.
+See repo sisaldab erinevaid shell-skripte, mida saab kasutada erinevate ülesannete lahendamiseks. Iga skripti kohta on allpool lühike kirjeldus. 
+Skriptide käivitamiseks on vaja kasutada käsku `bash` ja skripti nime. Näiteks: `bash skript.sh`.
+Skriptid on mõeldud kasutamiseks Linuxi keskkonnas.
 
 ## [Praks 1](/praks1/)
 
